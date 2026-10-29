@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 176" width="1200" height="176" role="img" aria-label="PixelLift pipeline: analyze, upscale, fix faces, add detail, sharpen">
+  <title>PixelLift pipeline</title>
+  <rect width="1200" height="176" rx="20" fill="#0b1020"/>
+  <path d="M 228 88 h 28" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4 4"/><path d="M 464 88 h 28" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4 4"/><path d="M 700 88 h 28" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4 4"/><path d="M 936 88 h 28" stroke="#4f46e5" stroke-width="2" stroke-dasharray="4 4"/>
+  <g>
+    <rect x="20" y="40" width="208" height="96" rx="16" fill="#111827" stroke="#6366f1" stroke-width="2" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.06;0.22;1" dur="5s" begin="0.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="124" y="82" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e0e7ff">Analyze</text>
+    <text x="124" y="110" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="13.5" fill="#a5b4fc">blur, noise, faces, subject</text>
+  </g><g>
+    <rect x="256" y="40" width="208" height="96" rx="16" fill="#111827" stroke="#6366f1" stroke-width="2" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.06;0.22;1" dur="5s" begin="1.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="360" y="82" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e0e7ff">Upscale ×4</text>
+    <text x="360" y="110" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="13.5" fill="#a5b4fc">Real-ESRGAN</text>
+  </g><g>
+    <rect x="492" y="40" width="208" height="96" rx="16" fill="#111827" stroke="#6366f1" stroke-width="2" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.06;0.22;1" dur="5s" begin="2.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="596" y="82" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e0e7ff">Fix faces</text>
+    <text x="596" y="110" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="13.5" fill="#a5b4fc">CodeFormer · people only</text>
+  </g><g>
+    <rect x="728" y="40" width="208" height="96" rx="16" fill="#111827" stroke="#6366f1" stroke-width="2" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.06;0.22;1" dur="5s" begin="3.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="832" y="82" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e0e7ff">Add detail</text>
+    <text x="832" y="110" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="13.5" fill="#a5b4fc">Stable Diffusion + ControlNet</text>
+  </g><g>
+    <rect x="964" y="40" width="208" height="96" rx="16" fill="#111827" stroke="#6366f1" stroke-width="2" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.06;0.22;1" dur="5s" begin="4.0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="1068" y="82" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e0e7ff">Sharpen</text>
+    <text x="1068" y="110" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="13.5" fill="#a5b4fc">final crisp pass</text>
+  </g>
+  <circle r="6" fill="#c084fc">
+    <animateMotion path="M 124 150 H 1068" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M 124 150 H 1068" stroke="#312e81" stroke-width="2"/>
+</svg>

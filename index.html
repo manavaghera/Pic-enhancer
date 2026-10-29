@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Upscale, denoise, sharpen and color-correct photos, then get a full quality report. Runs entirely in your browser; nothing is uploaded." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>PixelLift: Image Enhancer</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="PixelLift home">
+        <span class="brand-logo" id="brandLogo"></span>
+        <span class="brand-name">PixelLift</span>
+      </a>
+      <span class="privacy-pill" id="privacyPill">On-device · nothing is uploaded</span>
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode"></button>
+    </header>
+
+    <main class="app" id="app">
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Image enhancer &amp; analyzer</p>
+          <h1>Make blurry, small photos <span class="grad">sharp and clear.</span></h1>
+          <p class="lead">
+            Drop a photo and pick a quality. AI works out the rest: the right upscaler, face fixes, noise
+            cleanup and color for each image. Every pixel is processed on your device.
+          </p>
+          <ul class="features">
+            <li><strong>Automatic</strong> AI upscaling, face restoration, denoise and color, chosen per image</li>
+            <li><strong>Upscale</strong> 2×, 4×, 4K or 8K, or let AI pick the size</li>
+            <li><strong>Analyze</strong> sharpness, noise, exposure, color cast, JPEG quality and EXIF</li>
+            <li><strong>Batch</strong> process up to 200 images and download them as one ZIP</li>
+          </ul>
+        </div>
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Select images to enhance">
+          <span class="dz-icon" id="dzIcon"></span>
+          <p class="dz-title">Drop images here or paste <kbd>Ctrl</kbd>+<kbd>V</kbd></p>
+          <p class="dz-sub">JPG, PNG, WebP, AVIF, GIF, BMP · up to 50 MP each</p>
+          <button type="button" class="btn btn-primary btn-lg" id="pickBtn">Select images</button>
+          <div class="samples">
+            <span>No image handy? Try a sample:</span>
+            <div class="sample-row" id="sampleRow"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" id="workspace" hidden>
+        <div class="stage">
+          <div class="viewer" id="viewer" aria-label="Image preview"></div>
+          <div class="stage-pill" id="stagePill" hidden></div>
+          <div class="stage-bar">
+            <span class="stage-info" id="stageInfo"></span>
+            <div class="zoom-tools" role="group" aria-label="Zoom">
+              <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out"></button>
+              <span class="zoom-label" id="zoomLabel">100%</span>
+              <button type="button" class="icon-btn" id="zoomIn" aria-label="Zoom in"></button>
+              <button type="button" class="icon-btn" id="zoomFit" aria-label="Fit to screen"></button>
+              <button type="button" class="chip chip-sm" id="zoomActual">1:1</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Controls">
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" class="tab" id="tabEnhance" aria-controls="panelEnhance" aria-selected="true">Enhance</button>
+            <button type="button" role="tab" class="tab" id="tabAnalyze" aria-controls="panelAnalyze" aria-selected="false">Analyze</button>
+          </div>
+          <div class="tabpanel" id="panelEnhance" role="tabpanel" aria-labelledby="tabEnhance"></div>
+          <div class="tabpanel tabpanel-scroll" id="panelAnalyze" role="tabpanel" aria-labelledby="tabAnalyze" hidden></div>
+        </aside>
+
+        <div class="queue" id="queue" aria-label="Image queue"></div>
+      </section>
+    </main>
+
+    <div class="drop-overlay" id="dropOverlay" hidden><div>Drop to add images</div></div>
+    <input type="file" id="fileInput" accept="image/*" multiple hidden />
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

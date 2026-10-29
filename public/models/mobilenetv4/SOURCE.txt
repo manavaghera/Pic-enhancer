@@ -1,0 +1,9 @@
+MobileNetV4 conv small (timm mobilenetv4_conv_small.e2400_r224_in1k), ImageNet-1k
+classifier, ONNX export from
+https://huggingface.co/onnx-community/mobilenetv4_conv_small.e2400_r224_in1k
+(onnx/model.onnx, SHA-256 ca5b8dbf490f54e83c5d72f787821565447ea94347935f6b834cf0a4af0e8d37).
+Original weights: https://huggingface.co/timm/mobilenetv4_conv_small.e2400_r224_in1k,
+Apache License 2.0.
+
+Used to tell animal faces from human ones before face restoration
+(ImageNet classes 0-397 are animals).

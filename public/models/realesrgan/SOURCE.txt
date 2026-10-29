@@ -1,0 +1,15 @@
+Real-ESRGAN models for TensorFlow.js (graph models, float16 weights, 64x64 -> 256x256 tiles)
+
+general_fast-64  realesr-general-x4v3 blended 50/50 with realesr-general-wdn-x4v3
+                 (Real-ESRGAN's "denoise strength 0.5" setting)
+anime_fast-64    realesr-animevideov3
+
+Original weights: https://github.com/xinntao/Real-ESRGAN (Copyright (c) 2021, Xintao Wang),
+BSD 3-Clause License, see LICENSE in this folder.
+TensorFlow.js conversion taken unmodified from the npm package @plotdb/upscaler@0.0.5.
+
+SHA-256
+6392b9cf13f31c0e8af468f0a074541fed97b96eef48d2606813a72973515e8f  general_fast-64/group1-shard1of1.bin
+2031deb6e95b7b69cfbeb06a9fffa1e444ef9f2abc66766db556e7642f54c8a5  general_fast-64/model.json
+23fff169f9cb18d373748d7f7c8a34a98f85ee6429e25392ca0d2aaca020dcda  anime_fast-64/group1-shard1of1.bin
+38003633bfd4a7f52a25ed32e2cdcf67f7508ffefcec515e73c4627bd653d386  anime_fast-64/model.json
