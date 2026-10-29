@@ -1,17 +1,10 @@
 <p align="center">
-  <img src="docs/header.svg" alt="PixelLift: blurry in, sharp out" width="100%">
+  <img src="docs/header.svg" alt="PixelLift: make blurry photos sharp, on your own computer" width="100%">
 </p>
 
-<p align="center">
-  <img alt="Vite" src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white&style=flat-square">
-  <img alt="WebGPU" src="https://img.shields.io/badge/WebGPU-AI-4f46e5?style=flat-square">
-  <img alt="ONNX Runtime" src="https://img.shields.io/badge/ONNX_Runtime-web_%2B_CUDA-005CED?style=flat-square">
-  <img alt="Stable Diffusion" src="https://img.shields.io/badge/Stable_Diffusion-local-a855f7?style=flat-square">
-  <img alt="Tests" src="https://img.shields.io/badge/tests-109_passing-22c55e?style=flat-square">
-  <img alt="Private" src="https://img.shields.io/badge/photos-never_uploaded-0ea5e9?style=flat-square">
-</p>
+<p align="center"><sub>Vite · WebGPU · ONNX Runtime · Stable Diffusion · 109 tests · photos never leave your computer</sub></p>
 
-**PixelLift** turns small, blurry photos into sharp, detailed ones. Drop a photo and pick a size; the AI decides everything else — which upscaler to use, whether faces need fixing, how much noise to clean up and how to balance the colour. Everything runs on your own computer.
+**PixelLift** makes small, blurry photos sharp and detailed. Drop in a photo and pick an output size; it works out the rest for each image: which upscaler to use, whether there are faces to fix, how much noise to clean up and how to correct the colour. Everything runs on your own computer.
 
 ## See it
 
@@ -22,7 +15,7 @@
   <img src="docs/demo-dog.svg" alt="A blurry dog photo before and after PixelLift" width="49%">
   <img src="docs/demo-portrait.svg" alt="A blurry portrait before and after PixelLift" width="49%">
 </p>
-<p align="center"><sub>Test photos are AI-generated, then blurred and shrunk. Faces are only redrawn on people — the dog keeps its own.</sub></p>
+<p align="center"><sub>Test photos are AI-generated, then blurred and shrunk. Faces are only redrawn on people; the dog keeps its own.</sub></p>
 
 ## How it works
 
@@ -32,11 +25,11 @@
 
 Each photo is analysed first, and that analysis picks the plan:
 
-- **Upscaler** — Real-ESRGAN x4plus for photos, a lighter model for older GPUs, an anime model for drawings, pixel-perfect scaling for pixel art and plain resampling for very large photos.
-- **Blown-up pictures** — a photo with far less detail than pixels is shrunk to its real detail level first, so the AI sharpens it instead of painting smears.
-- **Faces** — small or blurry human faces are redrawn with CodeFormer. A small classifier checks for animals first, so dogs and cats keep their own faces.
-- **Realistic detail** — with the optional local AI server running, Stable Diffusion (Realistic Vision 5.1 + ControlNet Tile) redraws fine texture at the full output size, then a light final sharpening.
-- **Cleanup** — noise, JPEG blocks, exposure and white balance are fixed from the same analysis.
+- **Upscaler.** Real-ESRGAN x4plus for photos, a lighter model for older GPUs, an anime model for drawings, pixel-perfect scaling for pixel art and plain resampling for very large photos.
+- **Blown-up pictures.** A photo with far less detail than pixels is shrunk to its real detail level first, so the AI sharpens it instead of painting smears.
+- **Faces.** Small or blurry human faces are redrawn with CodeFormer. A small classifier checks for animals first, so dogs and cats keep their own faces.
+- **Realistic detail.** With the optional local AI server running, Stable Diffusion (Realistic Vision 5.1 + ControlNet Tile) redraws fine texture at the full output size, then a light final sharpening.
+- **Cleanup.** Noise, JPEG blocks, exposure and white balance are fixed from the same analysis.
 
 The **Analyze** tab shows the full report: quality score, sharpness, noise, exposure, colour cast, palette, histogram and camera data.
 
@@ -103,5 +96,5 @@ docs/        README graphics
 
 ## Notes
 
-- **Privacy** — photos never leave your computer. The only network requests are the one-time model downloads.
-- **GPU crashes** — if Windows crashes with a graphics-driver error (0x113) under heavy AI load, update or clean-install the NVIDIA driver.
+- **Privacy.** Photos never leave your computer. The only network requests are the one-time model downloads.
+- **GPU crashes.** If Windows crashes with a graphics-driver error (0x113) under heavy AI load, update or clean-install the NVIDIA driver.
